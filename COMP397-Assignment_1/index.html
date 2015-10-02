@@ -2,55 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>The Dragon!</title>
+    <title>The All-Nighter</title>
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="impress">
-        <div id="intro" class="step slide">
+    <div id="impress"><!--the div is ID'd impress - most likely to be referenced by impress.js' code to hold the State Machine as a containter in the canvas to cycle through the states-->
+        <div id="menu" class="step slide">
             <div class="slide-text">
-                <p>You are on a planet full of dragons. In front of you,</p>
-                <p>you see two caves. In one cave, the dragon is friendly</p>
-                <p>and will share his treasure with you. The other dragon</p>
-                <p>is greedy and hungry, and will eat you on sight.</p>
-                <br />
-                <p>Which cave do you go into?</p>
-                <p><a href="#cave1">CAVE 1</a></p>
-                <p>or</p>
-                <p><a href="#cave2">CAVE 2</a></p>
+                <h2>THE ALL-NIGHTER</h2>
+                <br>
+                <p><a href="#play">PLAY</a></p>
             </div>
         </div>
-
-        <div id="cave1" class="step slide" data-x="1500">
+        <div id="play" class="step slide" data-y="1500">
             <div class="slide-text">
-                <p>You approach the cave, it is dark and spooky.</p>
-            <p>A large red dragon jumps out in front of you!</p>
-            <p>He opens his jaws and...</p>
-            <br />
-            <p>Gobbles you down with one bite!</p>
-            </div> 
-            <div class="menu">
-                <a href="#intro">START OVER</a>
-            </div> 
-        </div> 
-
-        <div id="cave2" class="step slide" data-x="-1500">
-            <div class="slide-text">
-                <p>You approach the cave, it is bright and cheerful.</p>
-                <p>A large white dragon approaches you...</p>
-                <p>And gives you his treasure.</p>
-            </div> 
-            <div class="menu">
-                <a href="#intro">START OVER</a>
-            </div> 
+                <p>Procrastination. The bane of your academic pursuance.</p>
+                <p>You have yet again come across a trial of desperate time management,</p>
+                <p>in which you must complete your tasks properly before dawn - with a suitable time left for rest for the morning.</p>
+                <p>On this 9pm evening, what lays before you is a 10 page essay you haven't started nor planned for, with a morning deadline with</p>
+                <p>no exception for lateness, and due to your tardiness in the class, you need a B on this paper if you want to pass the class.</p>
+                <p>Other assignments collectively require your hand in finalizing - which luckily you only need probably an hour at most to do so.</p>
+                <p>The devil is in the details. All this time, for all your work, and enough for your needed respite.</p>
+                <br />
+                <p>What should you start first?</p>
+                <p><a href="#assignmentRoute">Assignments</a></p>
+                <p>or</p>
+                <p><a href="#essayRoute">Essay</a></p>
+            </div>
         </div>
-
-    </div>
-
+        <div id="assignmentRoute" class="step slide" data-x="1500">
+            <div class="slide-text">
+                <p>Most of the answers for these assignments were provided by an aquaintance, giving you lesser time needed to finish them.</p>
+                <p>You haven't had much time to check them and your judgement of that aquaintance hasn't been misplaced so far.</p>
+                <br>
+                <p>So...just finish what you need to finish in an hour and get on to that treadful essay,</p>
+                <p>or at least take a minute to see your friend's answer afterwards?</p>
+                <p><a href="#revisionRoute">Revise</a></p>
+                <p>or</p>
+                <p><a href="#toEssayRoute">Carry On Immediately</a></p>
+            </div>
+        </div>
+        <div id="essayRoute" class="step slide" data-x="-1500">
+            <div class="slide-text">
+                <p>Right...crap...how to approach this.</p>
+                <p>If I research my topic for 30 minutes it could really help with the time to get writing as fast as possible.</p>
+                <p>10 pages ain't no joke, and it will take a while to write...but with that said, these pages also need a substantial</p>
+                <p>quality considering my final grade is riding on them.</p>
+                <br>
+                <p>So...how long should you research?
+                <p><a href="#researchRoute1">30 Min</a></p>
+                <p>or</p>
+                <p><a href="#researchRoute2">An Hour</a></p>
+           </div>
+      </div>
+        <div id="researchRoute1" class="step slide" data-x="1500">
+            <div class="slide-text">
+                <p>Finally Testing - Research Route 1 State - from essayRoute - back to Menu State</p>
+            </div>
+            <div class="menu">
+                <a href="#menu">START OVER</a>
+            </div>
+        </div>
+        <div id="researchRoute2" class="step slide" data-x="-1500">
+            <div class="slide-text">
+                <p>Finally Testing - Research Route 2 State - from essayRoute - back to Menu State </p>
+            </div>
+            <div class="menu">
+                <a href="#menu">START OVER</a>
+            </div>
+        </div>
+</div>
     <!-- JavaScript Section -->
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
-
 </body>
 </html>
