@@ -12,65 +12,76 @@
             <div class="slide-text">
                 <h2>THE ALL-NIGHTER</h2>
                 <br>
+                <p>by</p>
+                <p>Jason Pearson</p>
+                <br>
                 <p><a href="#play">PLAY</a></p>
             </div>
         </div>
         <div id="play" class="step slide" data-y="1500">
             <div class="slide-text">
-                <p>Procrastination. The bane of your academic pursuance.</p>
-                <p>You have yet again come across a trial of desperate time management,</p>
-                <p>in which you must complete your tasks properly before dawn - with a suitable time left for rest for the morning.</p>
-                <p>On this 9pm evening, what lays before you is a 10 page essay you haven't started nor planned for, with a morning deadline with</p>
-                <p>no exception for lateness, and due to your tardiness in the class, you need a B on this paper if you want to pass the class.</p>
+                <p>Procrastination. The bane of your academic pursuance. You have yet again come across a trial of desperate time management,
+                   in which you must complete your tasks properly before dawn - with a suitable time left for rest for the morning.</p>
+                
+                <p>On this 9PM evening, what lays before you is a 10 page essay you haven't started nor planned for, with a morning deadline with
+                no exception for lateness, and due to your tardiness in the class, you need a B on this paper if you want to pass the class.</p>
+
                 <p>Other assignments collectively require your hand in finalizing - which luckily you only need probably an hour at most to do so.</p>
                 <p>The devil is in the details. All this time, for all your work, and enough for your needed respite.</p>
-                <br />
+
                 <p>What should you start first?</p>
-                <p><a href="#assignmentRoute">Assignments</a></p>
-                <p>or</p>
-                <p><a href="#essayRoute">Essay</a></p>
+                <p><a href="#assignmentRoute">Assignments</a>  or  <a href="#essayRoute">Essay</a></p> 
             </div>
         </div>
-        <div id="assignmentRoute" class="step slide" data-x="1500">
+        <div id="assignmentRoute" class="step slide" data-x="1500"><!--this goes straight to the 3030Route regardless - neither buttons work, because this didn't instantiate as another State in the State Machine, since in TheDragon, by this 3rd state essentially this should be over with one button...-->
             <div class="slide-text">
                 <p>Most of the answers for these assignments were provided by an aquaintance, giving you lesser time needed to finish them.</p>
                 <p>You haven't had much time to check them and your judgement of that aquaintance hasn't been misplaced so far.</p>
+                <p>So...just finish what you need to finish in an hour and get on to that treadful essay,
+                or at least take a minute to see your friend's answers afterwards?</p>
                 <br>
-                <p>So...just finish what you need to finish in an hour and get on to that treadful essay,</p>
-                <p>or at least take a minute to see your friend's answer afterwards?</p>
                 <p><a href="#revisionRoute">Revise</a></p>
                 <p>or</p>
-                <p><a href="#toEssayRoute">Carry On Immediately</a></p>
+                <p><a href="#forwardRoute">Carry On Immediately</a></p>
             </div>
         </div>
-        <div id="essayRoute" class="step slide" data-x="-1500">
+        <div id="essayRoute" class="step slide" data-x="-1500"> <!--this goes straight to the 30Route regardless because this didn't instantiate as another State in the State Machine, since in TheDragon, by this 3rd state essentially this should be over...-->
             <div class="slide-text">
                 <p>Right...crap...how to approach this.</p>
                 <p>If I research my topic for 30 minutes it could really help with the time to get writing as fast as possible.</p>
-                <p>10 pages ain't no joke, and it will take a while to write...but with that said, these pages also need a substantial</p>
-                <p>quality considering my final grade is riding on them.</p>
-                <br>
+                <p>Ten pages ain't no joke, and it will take a while to write...but with that said, these pages also need a substantial
+                   quality considering my final grade is riding on them.</p>
                 <p>So...how long should you research?
-                <p><a href="#researchRoute1">30 Min</a></p>
+                <p><a href="#30Route">30 Min</a></p>
                 <p>or</p>
-                <p><a href="#researchRoute2">An Hour</a></p>
+                <p><a href="#3030Route">An Hour</a></p>
            </div>
       </div>
-        <div id="researchRoute1" class="step slide" data-x="1500">
+        <div id="30Route" class="step slide" data-x="-1501">
             <div class="slide-text">
-                <p>Finally Testing - Research Route 1 State - from essayRoute - back to Menu State</p>
+                <p>After 30 minutes of research and 2 hours of writing, you've orchestrated a paper of absolute drivel...or bullcrap, as your teacher
+                   would describe after a sarcastic sniffing gesture, followed with the phrase,"Why is this the first thing I smell in the morning?" 
+                   With the quick references you managed to scrounge up, you've basically written the same arguments with only
+                   some expanded ideas differentiating them...for ten pages straight.</p>
+                <p>It is now 11:30PM.</p>
+                <p>You know this isn't up to snuff - not even to pass as good bullcrap covered in the scent of roses.</p>
+                <p>You still have an all-nighter to pull for the assignments, but if you want a good mark on this paper you'll need to...</p>
+                <br>
+                <p><a href="#compromiseAssignment">Salvage Essay</a>  or  <a href="#compromiseEssay">Revise Essay</a></p>
             </div>
-            <div class="menu">
-                <a href="#menu">START OVER</a>
-            </div>
-        </div>
-        <div id="researchRoute2" class="step slide" data-x="-1500">
+        </div><!--make data-x or y unique for each slide in order not to layer on top of the other states'- per width size of each scene - which is 700 x 650-->
+        <div id="3030Route" class="step slide" data-x="2150"><!--coming from the assignmentRoute (which is wrong) with that one button function in that state comimg back to here - maybe the State Machine code in the impress.js only goes back to the 1st after this, but since these next few states come after in the code, the 1st state is reinstantiated with this 30/3030Route's objects/elements in the container/canvas-->
             <div class="slide-text">
-                <p>Finally Testing - Research Route 2 State - from essayRoute - back to Menu State </p>
-            </div>
-            <div class="menu">
-                <a href="#menu">START OVER</a>
-            </div>
+                <p>During your hour of research, you managed to make a nice outline of correlating ideas, relevant research references, and a strong thesis to help make
+                   the 2 hour long writing a little easier. With a clear outline, you had enough brevity to consistently write thoughtout arguments with research to back it up,
+                   and sum it up nicely with the main ideas intact.</p>
+                <p>It is now 12AM. You could go with your gut on a pretty okay essay, but it would be even more satisfying had you just another 30 minutes to properly edit;
+                   besides, the assignments only need an hour to finish up anyway, and getting to sleep at 2AM would be enough.</p>
+                <p>So...what'll it be?</p>
+                <p><a href="#perfection">Revise Essay</a></p>
+                <p>or</p>
+                <p><a href="#diligence">Finish Assignments</a></p>
+             </div>
         </div>
 </div>
     <!-- JavaScript Section -->
